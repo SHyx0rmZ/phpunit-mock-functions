@@ -1,0 +1,18 @@
+namespace {namespace};
+
+static ${mocker} = null;
+
+function {function}()
+{
+    global ${mocker};
+
+    $arguments = func_get_args();
+
+    $result = ${mocker}->__phpunit_getInvocationMocker()->invoke(
+      new \PHPUnit_Framework_MockObject_Invocation_Static(
+        'internal', '{function}', $arguments, false
+      )
+    );
+
+    return $result;
+}

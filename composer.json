@@ -1,0 +1,19 @@
+{
+    "name": "ppokatilo/phpunit-mock-functions",
+    "description": "Extend PHPUnit with the ability to mock (internal) functions",
+    "require": {
+        "phpunit/phpunit": "^4.2"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Patrick Pokatilo",
+            "email": "mail@shyxormz.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SHyx0rmZ\\PhpUnit\\MockFunction\\": "src/"
+    },
+    "minimum-stability": "stable"
+}
