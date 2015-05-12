@@ -14,6 +14,7 @@
     "autoload": {
         "psr-4": {
             "SHyx0rmZ\\PhpUnit\\MockFunction\\": "src/"
+        }
     },
     "minimum-stability": "stable"
 }
