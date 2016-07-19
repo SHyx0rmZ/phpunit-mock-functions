@@ -2,7 +2,7 @@
     "name": "ppokatilo/phpunit-mock-functions",
     "description": "Extend PHPUnit with the ability to mock (internal) functions",
     "require": {
-        "phpunit/phpunit": "^4.2"
+        "phpunit/phpunit": "^4.2|^5.0"
     },
     "license": "MIT",
     "authors": [

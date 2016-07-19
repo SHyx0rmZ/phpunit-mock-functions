@@ -28,7 +28,7 @@ class MockFunction implements \PHPUnit_Framework_MockObject_MockObject
     public function expects(PHPUnit_Framework_MockObject_Matcher_Invocation $matcher)
     {
         $invocationMocker = $this->__phpunit_getInvocationMocker()->expects($matcher);
-        $invocationMocker->method($this->functionName);
+        $invocationMocker->method(new \PHPUnit_Framework_Constraint_IsEqual($this->functionName));
 
         return $invocationMocker;
     }
@@ -48,7 +48,9 @@ class MockFunction implements \PHPUnit_Framework_MockObject_MockObject
     public function __phpunit_getInvocationMocker()
     {
         if ($this->phpunitInvocationMocker === null) {
-            $this->phpunitInvocationMocker = new PHPUnit_Framework_MockObject_InvocationMocker;
+            $invocationMockerClass = new \ReflectionClass('PHPUnit_Framework_MockObject_InvocationMocker');
+
+            $this->phpunitInvocationMocker = $invocationMockerClass->newInstanceWithoutConstructor();
         }
 
         return $this->phpunitInvocationMocker;
